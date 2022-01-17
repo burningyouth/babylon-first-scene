@@ -1,11 +1,5 @@
 module.exports = {
   parser: "@typescript-eslint/parser", // add the TypeScript parser
-  parserOptions: {
-    // add these parser options
-    tsconfigRootDir: __dirname,
-    project: ["./tsconfig.json"],
-    extraFileExtensions: [".svelte"],
-  },
   plugins: [
     "svelte3",
     "@typescript-eslint", // add the TypeScript plugin
@@ -19,6 +13,7 @@ module.exports = {
   ],
   extends: ["eslint-config-silence", "plugin:@typescript-eslint/recommended"],
   rules: {
+    "init-declarations": 0,
     "import/no-mutable-exports": 0,
     "no-undef": 0,
     "no-unused-vars": 0,
